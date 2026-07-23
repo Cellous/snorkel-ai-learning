@@ -1,0 +1,24 @@
+# Snorkel AI Learning
+
+## Purpose
+
+Learn Snorkel AI and enterprise AI workflows.
+
+## Resources
+
+- Official Website: https://snorkel.ai/
+- Documentation: https://snorkel.ai/docs/
+- Research: https://snorkel.ai/research/
+- GitHub (if you find an official repository later)
+
+## Notes
+
+This repository contains my learning notes, experiments, and example projects while studying Snorkel AI.
+
+Career Resources
+
+- Handshake
+  https://joinhandshake.com/
+
+Purpose:
+University and alumni career networking, internships, and job opportunities.
