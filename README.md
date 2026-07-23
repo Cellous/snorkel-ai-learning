@@ -27,6 +27,15 @@ This repository documents my journey learning Snorkel AI and enterprise AI devel
 - Large Language Models (LLMs)
 - Snorkel AI
 
+## Learning Areas
+
+- Data-Centric AI
+- Enterprise AI
+- Specialized AI Agents
+- AI Evaluation
+- LLM Benchmarking
+- AI Safety
+- Frontier AI Research
 ---
 
 Status: 🚧 Learning in progress.
