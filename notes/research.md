@@ -55,6 +55,8 @@ Meta-evaluation
         ↓
 Rubric or benchmark refinement
 ```
+# Case Studies
+
 ## Objective Ground Truth Can Still Be Scored Incorrectly
 
 My physics-course experience represents the objective side of AI evaluation.
