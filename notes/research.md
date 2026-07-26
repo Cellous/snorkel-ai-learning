@@ -99,6 +99,17 @@ Therefore, reliable evaluation requires both:
 - validation of the submitted solution; and
 - validation of the evaluator itself.
 
+| Physics-course element       | AI-evaluation equivalent      |
+| ---------------------------- | ----------------------------- |
+| Test question                | Benchmark task                |
+| Official answer              | Ground-truth label            |
+| Teacher’s scoring system     | Evaluator                     |
+| Formula and substitutions    | Reproducible evaluation logic |
+| Scratch sheet                | Trace and provenance record   |
+| Incorrect marked result      | False negative                |
+| Independent professor review | Expert adjudication           |
+| Correcting the answer key    | Evaluator refinement          |
+
 ---
 
 ## Autocorrect as an Input-Integrity Problem
