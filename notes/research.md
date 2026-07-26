@@ -147,3 +147,65 @@ consequences.
 
 Human-in-the-loop evaluation must account for urgency, excitement, stress, and
 normal proofreading errors rather than assuming flawless user behavior.
+
+---
+
+# Terminal-Bench–style evaluation
+
+## Building Tasks and Environments in Tandem
+
+Agent benchmarks should develop the task and its operating environment
+together rather than treating them as separate components.
+
+A benchmark may include:
+
+- A task specification
+- A terminal or application environment
+- Input files and supporting data
+- Available tools and permissions
+- Hidden tests and verifiers
+- Agent action traces
+- Expected outputs
+- Rubrics and failure labels
+
+A change to the task can require changes to the environment, tests, rubric,
+and verifier. Otherwise, the benchmark may accidentally measure an
+environment defect instead of the agent's capability.
+
+## Observability Versus Evaluation
+
+Observability records what an agent did.
+
+Evaluation determines whether what the agent did was correct.
+
+A complete agent evaluation should capture:
+
+- Commands and tool calls
+- Files read and modified
+- Intermediate state changes
+- Errors and recovery attempts
+- Final deliverables
+- Compliance with task constraints
+- Output quality and maintainability
+
+## Personal Connection: Physics Scratch Work as a Trace
+
+During an online physics course, I maintained detailed scratch work showing
+the formulas, substitutions, calculations, and results used to solve the
+course problems.
+
+The instructor described the final scratch-work document as the cleanest one
+he had seen. I also earned a perfect score on that submission, possibly with
+bonus credit, although the exact recorded score should be verified later.
+
+The scratch work functioned like an execution trace:
+
+- The problem was the task specification.
+- The formulas were the reasoning procedure.
+- The calculations were intermediate state.
+- The final value was the output.
+- The answer key was the verifier.
+- Disagreements exposed possible evaluator defects.
+
+This experience demonstrates that clear technical traces help distinguish a
+solver error from an incorrect answer key, formula, or evaluation system.
