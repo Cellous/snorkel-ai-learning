@@ -96,3 +96,41 @@ Therefore, reliable evaluation requires both:
 
 - validation of the submitted solution; and
 - validation of the evaluator itself.
+
+---
+
+## Autocorrect as an Input-Integrity Problem
+
+Mobile keyboards and predictive-text systems can modify a word after it has
+been typed. If the user sends the message before reviewing it, the transmitted
+text may not accurately represent the user's intended statement.
+
+### Communication Trace
+
+1. The user forms an intended message.
+2. The user types the message.
+3. Autocorrect or predictive text modifies part of the input.
+4. The user sends the message.
+5. The recipient evaluates the transmitted wording.
+
+A failure at step 3 may later be attributed incorrectly to the user.
+
+### Connection to AI Evaluation
+
+The final recorded output should not always be treated as perfect evidence of
+the original intent. Reliable systems should preserve enough provenance to
+distinguish:
+
+- what the user originally entered;
+- what the software changed;
+- what was ultimately transmitted; and
+- whether the user confirmed the modification.
+
+### Design Lesson
+
+Systems should reduce accidental submissions by providing visible corrections,
+easy undo or editing, and additional confirmation when an action has important
+consequences.
+
+Human-in-the-loop evaluation must account for urgency, excitement, stress, and
+normal proofreading errors rather than assuming flawless user behavior.
