@@ -55,3 +55,44 @@ Meta-evaluation
         ↓
 Rubric or benchmark refinement
 ```
+## Objective Ground Truth Can Still Be Scored Incorrectly
+
+My physics-course experience represents the objective side of AI evaluation.
+
+Physics problems normally have a reproducible solution path:
+
+1. Identify the known values.
+2. Select the appropriate formula.
+3. Substitute the values.
+4. Preserve units and significant figures.
+5. Perform the calculation.
+6. Compare the result with the expected answer.
+
+I retained the test questions, my answers, the recorded results, and my
+scratch-work calculations. This evidence allowed me to identify apparent
+errors in the assessment rather than relying only on disagreement with the
+score.
+
+The scratch sheet functioned as an evaluation trace and provenance record.
+
+### Evaluation Mapping
+
+- Test question: benchmark task
+- Official answer key: ground-truth label
+- Automated scoring: evaluator
+- Formula and calculations: reproducible verification procedure
+- Scratch work: execution trace
+- Incorrect rejection of a valid answer: false negative
+- Review by other instructors: expert adjudication
+- Corrected answer key: evaluator refinement
+
+### Main Lesson
+
+Even when ground truth is objective, the evaluator may still be wrong because
+of an incorrect formula, transcription error, unit mismatch, rounding rule,
+or defective scoring implementation.
+
+Therefore, reliable evaluation requires both:
+
+- validation of the submitted solution; and
+- validation of the evaluator itself.
