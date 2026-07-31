@@ -231,3 +231,27 @@ A verifier should accept functionally equivalent solutions and reject:
 - **Rubrics + Verifiers:** geometric-property and tolerance checks
 - **Quality Control + Packaging:** oracle tests, no-op tests and maintainer review
 - **Updated Memory:** discovered CAD-agent failure modes and improved future tasks
+
+
+## CAD Task Package Architecture
+
+```text
+instruction.md
+    Defines the agent-visible assignment
+            ↓
+environment/
+    Builds an isolated workspace and provides schematic.png
+            ↓
+Agent execution
+    Interprets the drawing and writes /app/out.step
+            ↓
+Declared artifact
+    /app/out.step
+            ↓
+tests/
+    Loads and evaluates the STEP model in a separate verifier container
+            ↓
+Rubric and result
+    Accepts valid geometry or reports specific failures
+```
+
