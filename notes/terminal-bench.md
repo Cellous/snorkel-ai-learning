@@ -159,3 +159,75 @@ Observability records what the agent did.
 Evaluation determines whether the behavior was correct.
 
 Adversarial benchmark review determines whether the evaluation can be trusted.
+
+---
+
+## CAD Model Task Study
+
+The `cad-model` task is particularly relevant to my background in mechanical
+drafting, Autodesk Inventor, AutoCAD, SolidWorks, 3D printing, and Python.
+
+### Task Objective
+
+The agent must interpret a non-text schematic and create a valid three-
+dimensional mechanical model. The output is exported as a STEP file.
+
+The task requires:
+
+- Three-dimensional spatial reasoning
+- Interpretation of a graphical specification
+- Mechanical-design judgment
+- Accurate geometric construction
+- CAD-tool or programmatic-CAD knowledge
+- Compliance with formal output requirements
+
+### Programmatic CAD
+
+The published solution uses `build123d`, a Python library for constructing
+three-dimensional CAD models.
+
+This demonstrates that a terminal agent can perform CAD work without
+controlling a traditional graphical CAD application. The agent can instead
+generate the model through code and export an industry-standard STEP file.
+
+### Geometry-Based Verification
+
+The verifier does not require an exact byte-for-byte match with a reference
+STEP file.
+
+Instead, it converts the submitted model into a triangle mesh and evaluates
+physical and geometric properties such as:
+
+- Watertightness
+- Volume
+- Surface area
+- Principal inertia
+- Convex-hull volume
+- Convex-hull area
+- Euler number
+- Integral volume
+
+Floating-point properties are compared with a defined tolerance.
+
+### Evaluation Significance
+
+This is stronger than testing whether a file merely exists.
+
+It evaluates whether the artifact has the intended physical structure while
+allowing more than one valid implementation.
+
+A verifier should accept functionally equivalent solutions and reject:
+
+- Empty files
+- Corrupt STEP files
+- Copied but unmodified example models
+- Visually similar models with incorrect geometry
+- Models that violate required physical properties
+
+### Connection to the Tandem Design Principle
+
+- **Tasks + Environments:** schematic, CAD libraries, container and STEP output
+- **Traces + Outputs:** agent commands, Python source and generated STEP file
+- **Rubrics + Verifiers:** geometric-property and tolerance checks
+- **Quality Control + Packaging:** oracle tests, no-op tests and maintainer review
+- **Updated Memory:** discovered CAD-agent failure modes and improved future tasks
