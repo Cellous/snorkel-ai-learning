@@ -68,18 +68,13 @@ Gain = Stateful Reward - Stateless Reward
 
 # Design Principle
 
-## Build the following components in tandem
-```
-Tasks + Environments
-        ↓
-Traces + Outputs
-        ↓
-Rubrics + Verifiers
-        ↓
-Quality Control + Packaging
-        ↓
-Updated Memory and Future Tasks
-```
+## Tandem Design Principle
+
+![Tandem Design Principle](../diagrams/tandem-design-principle.png)
+
+Tasks and environments should be developed together with traces, outputs,
+rubrics, verifiers, quality controls, and memory updates. The resulting
+evidence should feed back into future task and environment design.
 
 The article’s most important practical point for your work is that **simple memory can be powerful because it is auditable**. A markdown file or persistent notepad can be inspected and corrected by a person, while more complex retrieval systems may introduce stale or hidden information. :contentReference[oaicite:2]{index=2}
 
